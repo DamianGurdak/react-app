@@ -1,0 +1,18 @@
+@import '../../styles/settings.scss';
+
+.columnForm {
+  text-align: center;
+  padding: 10px;
+
+  // do poprawy
+  @media (max-width: 767px) {
+    width: 100%;
+    flex-direction: column;
+    // margin: 0 0 $base-size 0;
+  }
+}
+
+.nameForm {
+  margin-left: 15px;
+  margin-right: 5px;
+}
