@@ -2,7 +2,6 @@ import styles from './Column.module.scss';
 import Card from '../Card/Card';
 import CardForm from '../CardForm/CardForm';
 
-
 const Column = (props) => {
   return (
     <article className={styles.column}>
@@ -21,10 +20,6 @@ const Column = (props) => {
 };
 
 export default Column;
-
-
-
-
 
 // const Column = ({ title }) => {
 //   return (
