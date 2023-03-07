@@ -6,24 +6,9 @@ const SearchForm = () => {
   return (
     <form className={styles.searchForm}>
       <TextInput placeholder='Search...' />
-      {/* <TextInput placeholder='test' /> */}
       <Button>
         <span className='fa fa-search' />
       </Button>
-
-      {/* <Button <span className='fa fa-search' /> /> */}
-      
-      {/* <Button text='Search' /> */}
-      {/* <Button props.children='Search' /> */}
-      {/* <Button children='Search' /> */}
-      
-
-      {/* ????????????????????????????????????? */}
-      {/* <Button children='Search' /> */}
-      {/* <Button>Search</Button> */}
-
-      {/* <TextInput placeholder='Add new column' /> */}
-      {/* <Button text='Create' /> */}
     </form>
   );
 };

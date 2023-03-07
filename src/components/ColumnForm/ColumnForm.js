@@ -18,14 +18,14 @@ const ColumnForm = (props) => {
     <form onSubmit={handleSubmit} className={styles.columnForm}>
       <span className={styles.nameForm}>Title: </span>
       <TextInput value={title} onChange={(e) => setTitle(e.target.value)} />
+
       <span className={styles.nameForm}>Icon: </span>
       <TextInput
         value={icon}
         onChange={(e) => setIcon(e.target.value)}
       ></TextInput>
+
       <Button>Add column</Button>
-      {/* dlaczego to nie działa? */}
-      {/* <Button text='Search' /> */}
     </form>
   );
 };

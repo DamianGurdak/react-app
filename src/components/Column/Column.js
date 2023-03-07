@@ -9,24 +9,16 @@ const Column = (props) => {
         <span className={styles.icon + ' fa fa-' + props.icon} />
         {props.title}
       </h2>
+
       <ul className={styles.cards}>
         {props.cards.map((card) => (
           <Card key={card.id} title={card.title} />
         ))}
       </ul>
+
       <CardForm columnId={props.id} action={props.addCard} />
     </article>
   );
 };
 
 export default Column;
-
-// const Column = ({ title }) => {
-//   return (
-//     <article className={styles.column}>
-//       <h2 className={styles.title}>{title}</h2>
-//     </article>
-//   );
-// };
-
-//tak było w module
