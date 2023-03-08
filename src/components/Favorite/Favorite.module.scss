@@ -1,0 +1,43 @@
+@use 'sass:math';
+@import '../../styles/settings.scss';
+
+.columnWrapper {
+  position: relative;
+}
+
+.column {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  flex-shrink: 0;
+  width: calc(33% - 12px);
+  background: $color-light;
+  margin: 0 $base-size $base-size 0;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 math.div($base-size, 4) 0 rgba(0, 0, 0, 0.3);
+  color: $color-dark;
+}
+
+.cards {
+  position: relative;
+  background: $color-light;
+  border: 1px solid lighten($color-dark, 60%);
+  padding: $base-size;
+  margin: 0 0 $base-size 0;
+  border-radius: $radius;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.subtitle {
+  padding: ($base-size * 2) 0;
+  text-align: center;
+  font-size: ($base-size * 2);
+  font-style: italic;
+  font-weight: normal;
+}
+
+.title + .subtitle {
+  margin-top: (-$base-size * 3);
+}
