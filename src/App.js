@@ -5,16 +5,9 @@ import About from './components/About/About';
 import Favorite from './components/Favorite/Favorite';
 import { Routes, Route } from 'react-router-dom';
 import WrongPage from './components/WrongPage/WrongPage';
+import List from './components/List/List.js';
 
 const App = () => {
-  // return (
-  //   <Container>
-  //     <Hero />
-  //     <SearchForm />
-  //     <List />
-  //   </Container>
-  // );
-
   return (
     <main>
       <NavBar />
@@ -24,6 +17,8 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/favorite' element={<Favorite />} />
           <Route path='*' element={<WrongPage />} />
+          {/* <Route path='/list/:listId' element={<List />} /> */}
+          <Route path='/list/:listId' element={<List />} />
         </Routes>
       </Container>
     </main>

@@ -4,6 +4,7 @@ import shortid from 'shortid';
 import strContains from '../utils/strContains';
 
 //selectors - funkcje do przygotowywania danych z magazynu
+
 export const getFilteredCards = ({ cards, searchString }, columnId) =>
   cards.filter(
     (card) =>
@@ -12,12 +13,23 @@ export const getFilteredCards = ({ cards, searchString }, columnId) =>
 
 export const getAllColumns = (state) => state.columns;
 
+export const getColumnsByList = ({ columns }, listId) =>
+  columns.filter((column) => column.listId === listId);
+
 export const getSearchString = (state) => state.searchString;
+
+export const getListById = ({ lists }, listId) =>
+  lists.find((list) => list.id === listId);
+
+// export const getAllLists = (state) => state.lists;
+export const getAllLists = ({ lists }) => lists;
 
 // action creators -funkcje przygotowujące obiekty akcji
 export const addColumn = (payload) => ({ type: 'ADD_COLUMN', payload });
 
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
+
+export const addList = (payload) => ({ type: 'ADD_LIST', payload });
 
 export const updateSearchstring = (payload) => ({
   type: 'UPDATE_SEARCHSTRING',
@@ -40,6 +52,9 @@ const reducer = (state, action) => {
 
     case 'UPDATE_SEARCHSTRING':
       return { ...state, searchString: action.payload };
+
+    case 'ADD_LIST':
+      return [...state, { ...action.payload, id: shortid() }];
 
     default:
       return state;

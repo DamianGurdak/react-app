@@ -5,7 +5,7 @@ import TextInput from '../TextInput/TextInput';
 import { useDispatch } from 'react-redux';
 import { addColumn } from '../../redux/store';
 
-const ColumnForm = (props) => {
+const ColumnForm = ({ listId }) => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
@@ -15,7 +15,7 @@ const ColumnForm = (props) => {
     e.preventDefault();
     // props.action({ title, icon });
     // dispatch({ type: 'ADD_COLUMN', payload: { title, icon } });
-    dispatch(addColumn({ title, icon }))
+    dispatch(addColumn({ title, icon, listId }));
     setTitle('');
     setIcon('');
   };
