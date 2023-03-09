@@ -38,6 +38,10 @@
   font-weight: normal;
 }
 
-.title + .subtitle {
+.title {
   margin-top: (-$base-size * 3);
+}
+
+.favorite {
+  padding: $base-size;
 }

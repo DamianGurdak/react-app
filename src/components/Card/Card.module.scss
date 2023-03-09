@@ -1,5 +1,16 @@
 @import '../../styles/settings.scss';
 
+.button {
+  border: none;
+  cursor: pointer;
+  :hover {
+    transform: scale(120%);
+  }
+}
+.isActive {
+  color: rgb(228, 165, 5);
+}
+
 .card {
   position: relative;
   background: $color-light;

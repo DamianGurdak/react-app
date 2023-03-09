@@ -9,13 +9,29 @@ const Column = (props) => {
   //   state.cards.filter((card) => card.columnId === props.id)
   // );
 
+  // const searchString = useSelector((state) => state.searchString);
+
   // const cards = useSelector((state) => state.cards).filter(
   //   (card) =>
   //     card.columnId === props.id &&
   //     card.title.toLowerCase().includes(searchString.toLowerCase())
   // );
 
+  ////----------------------- błąd -----------------------
+
+  // const searchString = useSelector((state) => state.searchString);
+
+  // const cards = useSelector((state) =>
+  //   state.cards.filter(
+  //     (card) =>
+  //       card.columnId === props.id &&
+  //       card.title.toLowerCase().includes(searchString.toLowerCase())
+  //   )
+  // );
+
   const cards = useSelector((state) => getFilteredCards(state, props.id));
+
+  ////----------------------- błąd -----------------------
 
   // console.log('Column render');
 
@@ -28,7 +44,16 @@ const Column = (props) => {
 
       <ul className={styles.cards}>
         {cards.map((card) => (
-          <Card key={card.id} title={card.title} />
+          <Card key={card.id} title={card.title}  />
+        ))}
+
+        {/* {cards.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            isFavorite={card.isFavorite}
+            cardId={card.id}
+          /> */}
         ))}
       </ul>
 

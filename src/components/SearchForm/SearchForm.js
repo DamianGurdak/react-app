@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSearchString } from '../../redux/store';
 import { updateSearchstring } from '../../redux/store';
 
-const SearchForm = () => {
+const SearchForm = (props) => {
   const dispatch = useDispatch();
 
   const searchStringValue = useSelector(getSearchString);
@@ -17,7 +17,7 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { currentSearchString } });
-    dispatch(updateSearchstring({currentSearchString}))
+    dispatch(updateSearchstring({ currentSearchString }));
   };
 
   return (
