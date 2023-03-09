@@ -54,7 +54,10 @@ const reducer = (state, action) => {
       return { ...state, searchString: action.payload };
 
     case 'ADD_LIST':
-      return [...state, { ...action.payload, id: shortid() }];
+      return {
+        ...state,
+        lists: [...state.lists, { id: shortid(), ...action.payload }],
+      };
 
     default:
       return state;

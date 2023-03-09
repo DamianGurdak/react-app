@@ -19,7 +19,7 @@ const ListForm = (props) => {
   };
 
   return (
-    <form className={styles.listForm} onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styles.listForm}>
       <div>
         <span>Title:</span>
         <TextInput
