@@ -9,7 +9,7 @@ const Card = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(toggleCardFavorite(props.id));
+    dispatch(toggleCardFavorite(props.cardId));
   };
 
   return (
