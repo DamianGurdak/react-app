@@ -18,6 +18,7 @@ const SearchForm = (props) => {
     e.preventDefault();
     // dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { currentSearchString } });
     dispatch(updateSearchstring(currentSearchString));
+    setCurrentSearchString(' ');
   };
 
   return (
